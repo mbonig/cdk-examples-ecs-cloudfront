@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CdnStack Snapshot 1`] = `
+{
+  "Mappings": {
+    "AWSCloudFrontPartitionHostedZoneIdMap": {
+      "aws": {
+        "zoneId": "Z2FDTNDATAQYW2",
+      },
+      "aws-cn": {
+        "zoneId": "Z3RFFRIM2A3IF5",
+      },
+    },
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "AWSCDKTriggerCustomResourceProviderCustomResourceProviderHandler97BECD91": {
+      "DependsOn": [
+        "AWSCDKTriggerCustomResourceProviderCustomResourceProviderRoleE18FAF0A",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-000011112222-us-east-1",
+          "S3Key": "9b642d28372ac0688d94d58f71770ceba997be43db88ea4b1cd0081a3ac5231e.zip",
+        },
+        "Handler": "__entrypoint__.handler",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "AWSCDKTriggerCustomResourceProviderCustomResourceProviderRoleE18FAF0A",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "AWSCDKTriggerCustomResourceProviderCustomResourceProviderRoleE18FAF0A": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Sub": "arn:\${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+          },
+        ],
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "lambda:InvokeFunction",
+                  ],
+                  "Effect": "Allow",
+                  "Resource": [
+                    {
+                      "Fn::Join": [
+                        "",
+                        [
+                          {
+                            "Fn::GetAtt": [
+                              "UrlPingTestWebsiteStackTestFunction396DF0FE",
+                              "Arn",
+                            ],
+                          },
+                          ":*",
+                        ],
+                      ],
+                    },
+                  ],
+                },
+              ],
+              "Version": "2012-10-17",
+            },
+            "PolicyName": "Inline",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "AliasRecord851000D2": {
+      "Properties": {
+        "AliasTarget": {
+          "DNSName": {
+            "Fn::GetAtt": [
+              "CF9390BA",
+              "DomainName",
+            ],
+          },
+          "HostedZoneId": {
+            "Fn::FindInMap": [
+              "AWSCloudFrontPartitionHostedZoneIdMap",
+              {
+                "Ref": "AWS::Partition",
+              },
+              "zoneId",
+            ],
+          },
+        },
+        "HostedZoneId": "DUMMY",
+        "Name": "test.example.com.",
+        "Type": "A",
+      },
+      "Type": "AWS::Route53::RecordSet",
+    },
+    "CF9390BA": {
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [
+            "test.example.com",
+          ],
+          "DefaultCacheBehavior": {
+            "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+            "Compress": true,
+            "OriginRequestPolicyId": {
+              "Ref": "OriginRequestPolicy3EFDB4FA",
+            },
+            "TargetOriginId": "testOrigin1194E2589",
+            "ViewerProtocolPolicy": "redirect-to-https",
+          },
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "CustomOriginConfig": {
+                "OriginProtocolPolicy": "https-only",
+                "OriginSSLProtocols": [
+                  "TLSv1.2",
+                ],
+              },
+              "DomainName": {
+                "Fn::ImportValue": "Extras:ExportsOutputFnGetAttLoadBalancerBE9EEC3ADNSNameD038AF30",
+              },
+              "Id": "testOrigin1194E2589",
+            },
+          ],
+          "ViewerCertificate": {
+            "AcmCertificateArn": {
+              "Fn::ImportValue": "Extras:ExportsOutputRefCertificate4E7ABB08F7C8AF50",
+            },
+            "MinimumProtocolVersion": "TLSv1.2_2021",
+            "SslSupportMethod": "sni-only",
+          },
+        },
+      },
+      "Type": "AWS::CloudFront::Distribution",
+    },
+    "OriginRequestPolicy3EFDB4FA": {
+      "Properties": {
+        "OriginRequestPolicyConfig": {
+          "CookiesConfig": {
+            "CookieBehavior": "none",
+          },
+          "HeadersConfig": {
+            "HeaderBehavior": "allViewer",
+          },
+          "Name": "testOriginRequestPolicy621CF7B0",
+          "QueryStringsConfig": {
+            "QueryStringBehavior": "none",
+          },
+        },
+      },
+      "Type": "AWS::CloudFront::OriginRequestPolicy",
+    },
+    "UrlPingTestE1169BF6": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "AliasRecord851000D2",
+      ],
+      "Properties": {
+        "ExecuteOnHandlerChange": true,
+        "HandlerArn": {
+          "Ref": "UrlPingTestWebsiteStackTestFunctionCurrentVersionB2F14C763c8f9572ded751b5c7825e5cc99d11e4",
+        },
+        "InvocationType": "RequestResponse",
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "AWSCDKTriggerCustomResourceProviderCustomResourceProviderHandler97BECD91",
+            "Arn",
+          ],
+        },
+        "Timeout": "600000",
+      },
+      "Type": "Custom::Trigger",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "UrlPingTestWebsiteStackTestFunction396DF0FE": {
+      "DependsOn": [
+        "AliasRecord851000D2",
+        "UrlPingTestWebsiteStackTestFunctionServiceRole15EF1E4A",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdk-hnb659fds-assets-000011112222-us-east-1",
+          "S3Key": "a886fb33721bee5d86d33990a15564ae555ffa2cdeb2d17fbb6227adaa068800.zip",
+        },
+        "Description": "src/constructs/WebsiteStackTest/WebsiteStackTest.lambda.ts",
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
+            "URL": "https://test.example.com",
+          },
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "UrlPingTestWebsiteStackTestFunctionServiceRole15EF1E4A",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "UrlPingTestWebsiteStackTestFunctionCurrentVersionB2F14C763c8f9572ded751b5c7825e5cc99d11e4": {
+      "DependsOn": [
+        "AliasRecord851000D2",
+      ],
+      "Properties": {
+        "FunctionName": {
+          "Ref": "UrlPingTestWebsiteStackTestFunction396DF0FE",
+        },
+      },
+      "Type": "AWS::Lambda::Version",
+    },
+    "UrlPingTestWebsiteStackTestFunctionServiceRole15EF1E4A": {
+      "DependsOn": [
+        "AliasRecord851000D2",
+      ],
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;

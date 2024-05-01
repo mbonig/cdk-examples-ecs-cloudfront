@@ -1,0 +1,1630 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "Reinvent" {
+    subgraph "cluster-SubGraph.Reinvent" {
+      graph [
+        label = "Reinvent",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      "Reinvent/DockerHub" [
+        label = " DockerHub",
+        fontsize = 12,
+        image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Secrets-Manager_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+      subgraph "cluster-SubGraph.Pipeline" {
+        graph [
+          label = "Pipeline",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "Reinvent/Pipeline/Pipeline" [
+          label = " Pipeline",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodePipeline_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "Reinvent/Pipeline/CodeBuildActionRole" [
+          label = " CodeBuildActionRole",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "Reinvent/Pipeline/UpdatePipeline/SelfMutation" [
+          label = " SelfMutation",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        subgraph "cluster-SubGraph.Assets" {
+          graph [
+            label = "Assets",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/Pipeline/Assets/DockerRole" [
+            label = " DockerRole",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/DockerAsset1" [
+            label = " DockerAsset1",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileRole" [
+            label = " FileRole",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset1" [
+            label = " FileAsset1",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset2" [
+            label = " FileAsset2",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset3" [
+            label = " FileAsset3",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset4" [
+            label = " FileAsset4",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset5" [
+            label = " FileAsset5",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset6" [
+            label = " FileAsset6",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset7" [
+            label = " FileAsset7",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset8" [
+            label = " FileAsset8",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/Pipeline/Assets/FileAsset9" [
+            label = " FileAsset9",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+      }
+      subgraph "cluster-SubGraph.DevPrimary" {
+        graph [
+          label = "DevPrimary",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "Reinvent/DevPrimary/CDN" [
+          label = " CDN",
+          fontsize = 12,
+        ];
+        subgraph "cluster-SubGraph.Vpc" {
+          graph [
+            label = "Vpc",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/DevPrimary/Vpc/Vpc" [
+            label = " Vpc",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-Virtual-Private-Cloud_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+        }
+        subgraph "cluster-SubGraph.Database" {
+          graph [
+            label = "Database",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/DevPrimary/Database/HeroesTable" [
+            label = " HeroesTable",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Database/64/Arch_Amazon-DynamoDB_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+        subgraph "cluster-SubGraph.Website" {
+          graph [
+            label = "Website",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/DevPrimary/Website/Cluster" [
+            label = " Cluster",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_Amazon-Elastic-Container-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "Reinvent/DevPrimary/Website/MediaBucket" [
+            label = " MediaBucket",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "Reinvent/DevPrimary/Website/Certificate" [
+            label = " Certificate",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/DevPrimary/Website/UrlPingTest" [
+            label = " UrlPingTest",
+            fontsize = 12,
+          ];
+          "Reinvent/DevPrimary/Website/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role" [
+            label = " Role",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.Service" {
+            graph [
+              label = "Service",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/DevPrimary/Website/Service/LB" [
+              label = " LB",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Elastic-Load-Balancing_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "Reinvent/DevPrimary/Website/Service/DNS" [
+              label = " DNS",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "Reinvent/DevPrimary/Website/Service/TaskDef" [
+              label = " TaskDef",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Task_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            subgraph "cluster-SubGraph.Service" {
+              graph [
+                label = "Service",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/DevPrimary/Website/Service/Service/Service" [
+                label = " ECS Service Service",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Service_48_Dark_gen.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/DevPrimary/Website/Service/Service/SecurityGroup" [
+                label = " SecurityGroup",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/security_group.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+            }
+          }
+        }
+        subgraph "cluster-SubGraph.MediaTranscoder" {
+          graph [
+            label = "MediaTranscoder",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/DevPrimary/MediaTranscoder/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" [
+            label = " Custom \nCDKBucketDeployment86",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "Reinvent/DevPrimary/MediaTranscoder/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+            label = " ServiceRole",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.VideoTranscoder" {
+            graph [
+              label = "VideoTranscoder",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/MediaConvertRole" [
+              label = " MediaConvertRole",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" [
+              label = " TriggerTranscoding",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/SourceBucketTrigger" [
+              label = " SourceBucketTrigger",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+          }
+          subgraph "cluster-SubGraph.Tester" {
+            graph [
+              label = "Tester",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/DevPrimary/MediaTranscoder/Tester/TestingMachine" [
+              label = " TestingMachine",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            subgraph "cluster-SubGraph.TestFileDeployment" {
+              graph [
+                label = "TestFileDeployment",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/TestFileDeployment/AwsCliLayer" [
+                label = " AwsCliLayer",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/TestFileDeployment/CustomResource" [
+                label = " CloudFormation\nCustomResource\nCustomResource",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.898,
+              ];
+            }
+            subgraph "cluster-SubGraph.Tests" {
+              graph [
+                label = "Tests",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+                label = " StateMachine",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.466,
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+                label = " OnEventHandler",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+                label = " IsCompleteHandler",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Resource4272048" [
+                label = " CloudFormation\nCustomResource\nResource4272048",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.898,
+              ];
+              subgraph "cluster-SubGraph.Provider" {
+                graph [
+                  label = "Provider",
+                  labelloc = "b",
+                  labeljust = "l",
+                  margin = "10",
+                  fontsize = "16",
+                  penwidth = "2",
+                  pencolor = "#888888",
+                  style = "filled,rounded",
+                  fillcolor = "#9c9c9c",
+                ];
+                "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" [
+                  label = " framework-onEvent",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" [
+                  label = " framework-isComplete",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" [
+                  label = " framework-onTimeout",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" [
+                  label = " Role",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 1.2,
+                  height = 1.466,
+                ];
+              }
+            }
+          }
+        }
+      }
+      subgraph "cluster-SubGraph.ProdPrimary" {
+        graph [
+          label = "ProdPrimary",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "Reinvent/ProdPrimary/CDN" [
+          label = " CDN",
+          fontsize = 12,
+        ];
+        subgraph "cluster-SubGraph.Vpc" {
+          graph [
+            label = "Vpc",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/ProdPrimary/Vpc/Vpc" [
+            label = " Vpc",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-Virtual-Private-Cloud_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+        }
+        subgraph "cluster-SubGraph.Database" {
+          graph [
+            label = "Database",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/ProdPrimary/Database/HeroesTable" [
+            label = " HeroesTable",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Database/64/Arch_Amazon-DynamoDB_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+        subgraph "cluster-SubGraph.Website" {
+          graph [
+            label = "Website",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/ProdPrimary/Website/Cluster" [
+            label = " Cluster",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_Amazon-Elastic-Container-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "Reinvent/ProdPrimary/Website/MediaBucket" [
+            label = " MediaBucket",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "Reinvent/ProdPrimary/Website/Certificate" [
+            label = " Certificate",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "Reinvent/ProdPrimary/Website/UrlPingTest" [
+            label = " UrlPingTest",
+            fontsize = 12,
+          ];
+          "Reinvent/ProdPrimary/Website/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role" [
+            label = " Role",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.Service" {
+            graph [
+              label = "Service",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/ProdPrimary/Website/Service/LB" [
+              label = " LB",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Elastic-Load-Balancing_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "Reinvent/ProdPrimary/Website/Service/DNS" [
+              label = " DNS",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "Reinvent/ProdPrimary/Website/Service/TaskDef" [
+              label = " TaskDef",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Task_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            subgraph "cluster-SubGraph.Service" {
+              graph [
+                label = "Service",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/ProdPrimary/Website/Service/Service/Service" [
+                label = " ECS Service Service",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Resource/Res_Containers/Res_48_Dark/Res_Amazon-Elastic-Container-Service_Service_48_Dark_gen.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/ProdPrimary/Website/Service/Service/SecurityGroup" [
+                label = " SecurityGroup",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/security_group.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+            }
+          }
+        }
+        subgraph "cluster-SubGraph.MediaTranscoder" {
+          graph [
+            label = "MediaTranscoder",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "Reinvent/ProdPrimary/MediaTranscoder/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" [
+            label = " Custom \nCDKBucketDeployment86",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "Reinvent/ProdPrimary/MediaTranscoder/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+            label = " ServiceRole",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.VideoTranscoder" {
+            graph [
+              label = "VideoTranscoder",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/MediaConvertRole" [
+              label = " MediaConvertRole",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" [
+              label = " TriggerTranscoding",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/SourceBucketTrigger" [
+              label = " SourceBucketTrigger",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+          }
+          subgraph "cluster-SubGraph.Tester" {
+            graph [
+              label = "Tester",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "Reinvent/ProdPrimary/MediaTranscoder/Tester/TestingMachine" [
+              label = " TestingMachine",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+            subgraph "cluster-SubGraph.TestFileDeployment" {
+              graph [
+                label = "TestFileDeployment",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/TestFileDeployment/AwsCliLayer" [
+                label = " AwsCliLayer",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/TestFileDeployment/CustomResource" [
+                label = " CloudFormation\nCustomResource\nCustomResource",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.898,
+              ];
+            }
+            subgraph "cluster-SubGraph.Tests" {
+              graph [
+                label = "Tests",
+                labelloc = "b",
+                labeljust = "l",
+                margin = "10",
+                fontsize = "16",
+                penwidth = "2",
+                pencolor = "#888888",
+                style = "filled,rounded",
+                fillcolor = "#aaaaaa",
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+                label = " StateMachine",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.466,
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+                label = " OnEventHandler",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+                label = " IsCompleteHandler",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 2,
+                height = 2.266,
+              ];
+              "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Resource9713472" [
+                label = " CloudFormation\nCustomResource\nResource9713472",
+                fontsize = 12,
+                image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+                imagescale = "true",
+                imagepos = "tc",
+                penwidth = "0",
+                shape = "node",
+                fixedsize = "true",
+                labelloc = "b",
+                width = 1.2,
+                height = 1.898,
+              ];
+              subgraph "cluster-SubGraph.Provider" {
+                graph [
+                  label = "Provider",
+                  labelloc = "b",
+                  labeljust = "l",
+                  margin = "10",
+                  fontsize = "16",
+                  penwidth = "2",
+                  pencolor = "#888888",
+                  style = "filled,rounded",
+                  fillcolor = "#9c9c9c",
+                ];
+                "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" [
+                  label = " framework-onEvent",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" [
+                  label = " framework-isComplete",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" [
+                  label = " framework-onTimeout",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 2,
+                  height = 2.266,
+                ];
+                "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" [
+                  label = " Role",
+                  fontsize = 12,
+                  image = "/Users/matthewbonig/.npm/_npx/b98735c91b702b55/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+                  imagescale = "true",
+                  imagepos = "tc",
+                  penwidth = "0",
+                  shape = "node",
+                  fixedsize = "true",
+                  labelloc = "b",
+                  width = 1.2,
+                  height = 1.466,
+                ];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/CodeBuildActionRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/DockerAsset1" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset3" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset4" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset5" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset6" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset7" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset8" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Pipeline" -> "Reinvent/Pipeline/Assets/FileAsset9" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/DockerAsset1" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset3" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset4" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset5" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset6" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset7" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset8" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/CodeBuildActionRole" -> "Reinvent/Pipeline/Assets/FileAsset9" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/DockerRole" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/DockerRole" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/DockerAsset1" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/DockerAsset1" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/DockerAsset1" -> "Reinvent/Pipeline/Assets/DockerRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileRole" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileRole" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset1" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset1" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset1" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset2" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset2" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset2" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset3" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset3" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset3" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset4" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset4" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset4" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset5" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset5" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset5" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset6" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset6" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset6" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset7" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset7" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset7" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset8" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset8" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset8" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset9" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset9" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/Assets/FileAsset9" -> "Reinvent/Pipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/UpdatePipeline/SelfMutation" -> "Reinvent/DockerHub" [
+    dir = "both",
+  ];
+  "Reinvent/Pipeline/UpdatePipeline/SelfMutation" -> "Reinvent/Pipeline/Pipeline" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/LB" -> "Reinvent/DevPrimary/Website/Certificate" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/LB" -> "Reinvent/DevPrimary/Website/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/DNS" -> "Reinvent/DevPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/TaskDef" -> "Reinvent/DevPrimary/Website/MediaBucket" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/Service/Service" -> "Reinvent/DevPrimary/Website/Cluster" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/Service/Service" -> "Reinvent/DevPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/Service/Service" -> "Reinvent/DevPrimary/Website/Service/TaskDef" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/Service/Service" -> "Reinvent/DevPrimary/Website/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/Website/Service/Service/SecurityGroup" -> "Reinvent/DevPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" -> "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/MediaConvertRole" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/SourceBucketTrigger" -> "Reinvent/DevPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/StateMachine" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/TestingMachine" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" [
+    dir = "both",
+  ];
+  "Reinvent/DevPrimary/MediaTranscoder/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "Reinvent/DevPrimary/MediaTranscoder/Tester/TestFileDeployment/AwsCliLayer" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/LB" -> "Reinvent/ProdPrimary/Website/Certificate" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/LB" -> "Reinvent/ProdPrimary/Website/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/DNS" -> "Reinvent/ProdPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/TaskDef" -> "Reinvent/ProdPrimary/Website/MediaBucket" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/Service/Service" -> "Reinvent/ProdPrimary/Website/Cluster" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/Service/Service" -> "Reinvent/ProdPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/Service/Service" -> "Reinvent/ProdPrimary/Website/Service/TaskDef" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/Service/Service" -> "Reinvent/ProdPrimary/Website/Service/Service/SecurityGroup" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/Website/Service/Service/SecurityGroup" -> "Reinvent/ProdPrimary/Website/Service/LB" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" -> "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/MediaConvertRole" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/SourceBucketTrigger" -> "Reinvent/ProdPrimary/MediaTranscoder/VideoTranscoder/TriggerTranscoding" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/StateMachine" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/TestingMachine" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onEvent" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-isComplete" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/waiter-state-machine/Role" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/Tests/Provider/framework-onTimeout" [
+    dir = "both",
+  ];
+  "Reinvent/ProdPrimary/MediaTranscoder/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "Reinvent/ProdPrimary/MediaTranscoder/Tester/TestFileDeployment/AwsCliLayer" [
+    dir = "both",
+  ];
+}
